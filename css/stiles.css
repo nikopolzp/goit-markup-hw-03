@@ -11,12 +11,51 @@
 }
 
 body {
+    margin: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     color: var(--primary-text-color);
     letter-spacing: 0.03em;
     background-color: var(--primary-color);
 }
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: rgb(205, 50, 166);
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    text-align: center;
+    color: var(--title-text-color);
+}
+
+.image {
+    display: block;
+    outline: 2px solid teal;
+}
+
+.container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+    outline: 2px solid tomato;
+}
+
 
 /* ----------HEADER----------- */
 .logo {
@@ -33,10 +72,6 @@ body {
 
 .accent {
     color: var(--accent-color);
-}
-
-.list {
-    list-style: none;
 }
 
 .link {
@@ -71,22 +106,28 @@ body {
 
 /* -----------HERO----------- */
 .hero {
+    text-align: center;
     background-color: var(--secondary-bg-color);
 }
 
 .hero-title {
+    margin-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.4;
-    text-align: center;
+
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--primary-color);
 }
 
-.button {
+.hero .button {
+    display: inline-block;
+    padding: 10px 32px;
+    min-width: 216px;
+    text-align: center;
     font-family: inherit;
-    font-style: 16px;
+    font-size: 16px;
     color: var(--primary-color);
     background-color: var(--accent-color);
     border-radius: 4px;
@@ -101,13 +142,6 @@ body {
 }
 
 /* -------------FEATURES------------- */
-.title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    color: var(--title-text-color);
-}
 
 .visually-hidden {
     position: absolute;
@@ -127,6 +161,7 @@ body {
 }
 
 .features .subtitle {
+    margin-bottom: 10px;
     font-size: 14px;
     font-weight: 700;
     line-height: 1.14;
@@ -139,6 +174,7 @@ body {
 
 /* -------OCCUPATION---------------- */
 .occupation .title {
+    margin-bottom: 50px;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
@@ -149,21 +185,35 @@ body {
     background-color: var(--portfolio-bg-btn-color);
 }
 
+.team .image {
+    margin-bottom: 30px;
+}
+
 .team .item {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     background-color: var(--primary-color);
 }
 
-.team .name {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
+.team .title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.17;
     text-align: center;
     color: var(--title-text-color);
 }
 
-.team .profession {
+.team .subtitle {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+}
+
+.team .text {
+    padding-bottom: 30px;
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
@@ -171,24 +221,30 @@ body {
 
 /* -----------FOOTER-------------- */
 .footer {
+    padding-top: 60px;
     background-color: var(--secondary-bg-color);
 }
 
 .residence {
+    padding-bottom: 60px;
     font-style: normal;
 }
 
 .footer .logo {
+    display: block;
+    margin-bottom: 20px;
     color: var(--primary-color);
-}
-
-.footer .link {
-    text-decoration: none;
 }
 
 .footer .link:hover,
 .footer .link:focus {
     color: var(--accent-color);
+}
+
+.footer .location,
+.footer .communication[href="mailto:info@devstudio.com"] {
+    display: block;
+    margin-bottom: 9px;
 }
 
 .location {
@@ -201,7 +257,11 @@ body {
     color: rgba(255, 255, 255, 0.6);
 }
 
+
 /* -----------Portfolio---------- */
+.project .list {
+    margin-bottom: 50px;
+}
 
 .project .button {
     font-family: inherit;
@@ -227,7 +287,12 @@ body {
     text-decoration: none;
 }
 
+.examples .image {
+    margin-bottom: 20px;
+}
+
 .examples .subtitle {
+    margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -235,6 +300,7 @@ body {
 }
 
 .examples .text {
+    padding-bottom: 20px;
     font-size: 16px;
     line-height: 1.9;
     color: var(--primary-text-color);
